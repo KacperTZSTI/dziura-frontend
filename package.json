@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "posthtml": "posthtml -o public/index.html -i input.html -c config.json",
+    "serve": "cross-env NODE_ENV=development concurrently \"npm run watch:css\" \"npm run watch:html\" \"live-server ./public\"",
+    "development": "cross-env NODE_ENV=development npm run build:css && npm run build:html",
+    "production": "cross-env NODE_ENV=production npm run build:css && npm run build:html",
+    "build": "posthtml -c config.json",
+    "watch:html": "npm run build:html & onchange \"html/**/*.html\" -- npm run build:html"
+   
+  },
+  "devDependencies": {
+    "onchange": "^7.1.0",
+    "posthtml-modules": "^0.9.1"
+  },
+  "dependencies": {
+    "posthtml-cli": "^0.10.0"
+  }
+}

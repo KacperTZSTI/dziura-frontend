@@ -11,6 +11,9 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    height: calc(100vh - 220px);
+    overflow-y: auto;
+    
 }
 
 h1 {
@@ -98,7 +101,7 @@ a {
 
 #pfp {
     border-radius: 50%;
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 

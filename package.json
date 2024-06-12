@@ -5,7 +5,7 @@
     "development": "cross-env NODE_ENV=development npm run build:css && npm run build:html",
     "production": "cross-env NODE_ENV=production npm run build:css && npm run build:html",
     "build": "posthtml -c config.json",
-    "watch:html": "npm run build:html & onchange \"html/**/*.html\" -- npm run build:html"
+    "watch": "npm run build & onchange \"html/**/*.html\" -- npm run build"
    
   },
   "devDependencies": {

@@ -61,13 +61,13 @@ a {
 }
 
 .prof {
-    width: 300px;
+    width: 500px;
 }
 
 .gwiazdki {
     width: 100%;
-    height: 40px;
-    margin-bottom: 30px;
+    height: 70px;
+    margin-bottom: 60px;
 }
 
 .stars {
@@ -77,21 +77,21 @@ a {
 
 .yellow {
     width: 98%;
-    height: 100%;
+    height: 98%;
     background-color: #FFE500;
+    top: -78.2px;
+    left: 5px;
     position: relative;
-    top: -47.7px;
-    left: 3px;
     z-index: -1;
 }
 
 .empty {
     background-color: gray;
     width: 97.5%;
-    height: 100%;
+    height: 97%;
     position: relative;
-    top: -91.7px;
-    left: 3px;
+    top: -150px;
+    left: 5px;
     z-index: -2;
     margin: auto;
 }
@@ -102,7 +102,7 @@ a {
     height: auto;
 }
 
-@media only screen and (max-width: 1200px) {
+@media (width <= 1400px) {
     .container {
         flex-wrap: wrap;
     }
@@ -138,5 +138,69 @@ a {
         margin-left: auto;
         height: 30px;
         width: auto;
+    }
+}
+
+@media (width <= 500px) {
+    .yellow {
+        height: 75%;
+        top: -62.4px;
+        left: 4px;
+    }
+    
+    .empty {
+        height: 77%;
+        top: -118.5px;
+    }
+}
+
+@media (600px <= width <= 1400px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .prof {
+        order: 1;
+        margin: auto;
+        margin-top: 120px;
+        top: 60px;
+        position: relative;
+    }
+    .prof_nav>a {
+        width: 35%;
+        margin-right: 30px;
+    }
+    .prof_nav>a>div {
+        width: 100%;
+        font-size: 16px;
+        height: 40px;
+    }
+    .prof_nav {
+        order: 2;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    #pfp {
+        border-radius: 50%;
+        width: 60%;
+        height: auto;
+        margin-left: 60px;
+    }
+    .prof_nav>a>div>img {
+        margin-left: auto;
+        height: 30px;
+        width: auto;
+    }
+    
+    .yellow {
+        height: 95%;
+        top: -75.2px;
+        left: 5px;
+    }
+    
+    .empty {
+        height: 93%;
+        top: -145px;
+        left: 7px;
     }
 }

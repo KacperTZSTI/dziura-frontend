@@ -1,37 +1,30 @@
 <!DOCTYPE html>
-<html lang="pl">
-    <head>
-       
-        
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dziura</title>
+    
+    <script>
 
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="nav.css">
-    </head>
+    import { Calendar } from 'fullcalendar'
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const calendarEl = document.getElementById('calendar')
+    const calendar = new Calendar(calendarEl, {
+    initialView: 'dayGridMonth'
+  })
+  calendar.render()
+})
+
+    </script>
+    <title>kalendarz</title>
+    <link rel="stylesheet" href="nav.css">
+</head>
 <body>
-   <header>
-    <h1>Strona Główna</h1>
-    <img src="/images/logo.svg" alt="logo ZSTI">
-</header>
-    <main>
-       <article>
-        <h2>Nowości</h2>
-       </article>
-       <article>
-        <h2>Nowości</h2>
-       </article>
-       <article>
-        <h2>Nowości</h2>
-       </article>
-       <article>
-        <h2>Nowości</h2>
-       </article>
-    </main>
 
-
+    <div id="calendar"></div>
+    
 <nav>
     <hr>
     <ul>
@@ -41,7 +34,6 @@
      <li><a href="/public/kalendarz.html"><img src="/images/Vector4.svg" alt="kalendarz"></a></li>
      <li><a href="/public/profile.html"><img src="/images/Vector5.svg" alt="profil uzytkownika"></a></li>
     </ul>  
- </nav>   
-
+ </nav>  
 </body>
 </html>

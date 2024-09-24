@@ -5,14 +5,16 @@
     "development": "cross-env NODE_ENV=development npm run build:css && npm run build:html",
     "production": "cross-env NODE_ENV=production npm run build:css && npm run build:html",
     "build": "posthtml -c config.json",
-    "watch": "npm run build & onchange \"html/**/*.html\" -- npm run build"
-   
+    "watch": "npm run build & onchange \"html/**/*.html\" -- npm run build",
+    "start": "http-server"
   },
   "devDependencies": {
+    "http-server": "^14.1.1",
     "onchange": "^7.1.0",
     "posthtml-modules": "^0.9.1"
   },
   "dependencies": {
+    "fullcalendar": "^6.1.15",
     "posthtml-cli": "^0.10.0"
   }
 }
